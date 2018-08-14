@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IOHS18001职业健康安全管理体系</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../slick.min.js"></script>
+
+    <script src="../wySilder.min.js" type="text/javascript"></script>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../animations.css" media="all">
+    <link rel="stylesheet" href="../style.css" media="all">
+    <link rel="stylesheet" href="../styles.css" media="all">
+    <link rel="stylesheet" href="../amazeui.slick.min.css" media="all">
+    <link rel="stylesheet" href="../index.css"/>
+    <link rel="stylesheet" href="../span.css"/>
+
+
+    <!--演示内容开始-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a, img {
+            border: 0;
+        }
+
+        body {
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+
+        /* marqueeleft */
+        .marqueeleft {
+            height: 130px;
+            width: 1000px;
+            overflow: hidden;
+            margin: 15px auto;
+        }
+
+        .marqueeleft ul {
+            float: left;
+        }
+
+        .marqueeleft li {
+            float: left;
+            margin: 0 5px;
+            display: inline;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+
+        /* marqueetop */
+        .marqueetop {
+            height: 429px;
+            width: 148px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+
+        .marqueetop li {
+            padding: 5px 0;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            //js无缝滚动代码
+            function marquee(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+                if (direction == "up") {
+                    if (obj2.offsetTop - obj.scrollTop <= 0) {
+                        obj.scrollTop -= (obj1.offsetHeight + 20);
+                    } else {
+                        var tmp = obj.scrollTop;
+                        obj.scrollTop++;
+                        if (obj.scrollTop == tmp) {
+                            obj.scrollTop = 1;
+                        }
+                    }
+                } else {
+                    if (obj2.offsetWidth - obj.scrollLeft <= 0) {
+                        obj.scrollLeft -= obj1.offsetWidth;
+                    } else {
+                        obj.scrollLeft++;
+                    }
+                }
+            }
+
+            function marqueeStart(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+
+                obj2.innerHTML = obj1.innerHTML;
+                var marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                obj.onmouseover = function () {
+                    window.clearInterval(marqueeVar);
+                }
+                obj.onmouseout = function () {
+                    marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                }
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="header_top">
+        <div class="navigation">
+
+            <ul class="menu" id="menu-mainmenu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../qualification/1.html">资质服务</a></li>
+                <li><a href="../management/1.html">管理体系</a></li>
+                <li><a href="../gaoxin/1.html">高新认证</a></li>
+                <li><a href="../fiscaltax/1.html">财税服务</a></li>
+                <li><a href="../property/1.html">知识产权</a></li>
+                <li><a href="../about1.html">联系我们</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="js-silder">
+        <div class="silder-scroll">
+            <div class="silder-main">
+                <div class="silder-main-img">
+                    <img src="../images/2-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/3-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/1-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="containerTop"></div>
+        <div class="containerContent">
+            <div class="content">
+                <div class="breadcrumb">
+                    <span style="float:left; font-size:16px;"></span>
+                    <span style="float:right; font-size:14px;">当前位置:<a href="../index.html">首页</a> &gt; <a
+                            href="javascript:;">IOHS18001职业健康安全管理体系</a></span>
+                </div>
+
+
+                <div class="posts single" id="post-2">
+                    
+                    <img src="../images/shenbao.jpg" />
+                    <p><span class="sspan">
+
+OHSAS18000认证给企业带来的益处<br/>
+
+1、在组织内部提高对职业健康与安全管理的积极性与接受程度<br/>
+2、系统化所有与职业健康与安全相关的活动，减少意外事故<br/>
+3、随着健康风险的降低，相关费用也跟着减少<br/>
+4、由于严格遵守所有适用的法律法规要求，企业运作具有合法性<br/>
+5、OHSAS过程中所包含的管理使得员工的自我意识与积极性得到提升<br/>
+6、通过记录并保持OHSAS绩效，体现企业形象和竞争力<br/>
+7、降低因意外事故和生产故障所造成的原材料损失<br/>
+8、降低保险费用<br/>
+9、有机会形成一个包括质量管理体系、环境管理体系和职业健康与安全管理体系在内的集成管理体系<br/>
+
+                        </span></p>
+
+                    <hr style="height:1px;border:none;border-top:1px solid #185598;"/>
+
+                    <p style="text-align: center;"><span>OHSAS18000认证所需材料</span></p>
+                    <p> 
+                        
+
+申请方法律地位证明（如：年检有效期内的营业执照）。<br/>
+1. 有效期内的许可证、资质证书等（法律法规规定需要资质和许可证的行业）。<br/>
+2. 有效的管理体系文件（手册、程序文件等）。<br/>
+3. 产品/服务生产过程的流程图 。<br/>
+4. 当存在一个组织多个名称且需在认证范围中表述时，除需提供各个名称的上述条款要求的材料外，还需提供表明多个名称之间确属同一组织同一体系的证明材料（如：上级主管单位的证明、股权证明等）。 <br/>
+5. 组织认证涉及多场所（两个或两个以上时），提供多场所清单；建筑、施工等组织提供“在建、竣工项目清单”。 <br/>
+
+                    </p>
+
+
+                    <div class="clear"></div>
+                </div>
+
+
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><h3>管理体系</h3>
+                        <ul class="sub">
+                            <li><a title="ISO9001质量管理体系" href="./1.html">ISO9001质量管理体系</a></li>
+                            <li><a title="ISO14001环境管理体系" href="./2.html">ISO14001环境管理体系</a></li>
+                            <li class="left_hover"><a title="IOHS18001职业健康安全管理体系" href="./3.html">IOHS18001职业健康安全管理体系</a></li>
+                            <li><a title="ISO20000 IT服务管理体系" href="./4.html">ISO20000 IT服务管理体系</a></li>
+                            <li><a title="ISO27001信息安全管理体系" href="./5.html">ISO27001信息安全管理体系</a></li>
+                            <li><a title="CMMI认证" href="./6.html">CMMI认证</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div style="padding-top:20px; width:244px;">
+                    <img src="../images/ScanQRCode.png" width="244"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="footer_frame">
+    <div class="footer">
+        <ul style="margin-right:115px;">
+            <h3>联系我们</h3>
+            <li><a title="联系我们" href="../about1.html">联系我们</a></li>
+        </ul>
+        <ul>
+            <h3>服务项目</h3>
+            <li><a title="资质服务" href="../qualification/1.html">资质服务</a></li>
+            <li><a title="管理体系" href="../management/1.html">管理体系</a></li>
+            <li><a title="高新认证" href="../gaoxin/1.html">高新认证</a></li>
+            <li><a title="财税服务" href="../fiscaltax/1.html">财税服务</a></li>
+            <li><a title="知识产权" href="../property/1.html">知识产权</a></li>
+        </ul>
+        <ul>
+            <h3>友情链接</h3>        
+            <li><a title="集成认证网" href="http://www.csi-s.org.cn/miit">集成认证网</a></li>
+            <li><a title="认可监督网" href="http://cx.cnca.cn/rjwcx/web/cert/index.do?progId=1212">认可监督网</a></li>
+            <li><a title="高新认证网" href="http://www.innocom.gov.cn/">高新认证网</a></li>
+            <li><a title="中国音像协会" href="http://www.chinaave.org/">中国音像协会</a></li>
+            <li><a title="北京安防协会" href="http://www.bspia.com/">北京安防协会</a></li>
+        </ul>
+        <ul>
+            <h3>公司简介</h3>
+            <li><a title="公司简介" href="../about2.html">公司简介</a></li>
+            <li><a title="企业文化" href="../about3.html">企业文化</a></li>
+        </ul>
+    </div>
+    <div class="footer_bottom">
+        <span class="corp">版权所有 安智创信(北京)科技有限公司 　地址：北京市昌平区发展路八号院6号楼512室　　全国统一服务热线：010-53602470&nbsp;&nbsp;&nbsp; </span>
+        <span class="support">京ICP备18012261号 </span>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        $(".js-silder").silder({
+            auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
+            speed: 30,//轮播图运动速度
+            sideCtrl: true,//是否需要侧边控制按钮
+            bottomCtrl: true,//是否需要底部控制按钮
+            defaultView: 0,//默认显示的索引
+            interval: 5000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
+            activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
+        });
+    });
+</script>
+
+</html>

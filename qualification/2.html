@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>系统集成运维专项</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../slick.min.js"></script>
+
+    <script src="../wySilder.min.js" type="text/javascript"></script>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../animations.css" media="all">
+    <link rel="stylesheet" href="../style.css" media="all">
+    <link rel="stylesheet" href="../styles.css" media="all">
+    <link rel="stylesheet" href="../amazeui.slick.min.css" media="all">
+    <link rel="stylesheet" href="../index.css"/>
+    <link rel="stylesheet" href="../span.css"/>
+
+
+    <!--演示内容开始-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a, img {
+            border: 0;
+        }
+
+        body {
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+
+        /* marqueeleft */
+        .marqueeleft {
+            height: 130px;
+            width: 1000px;
+            overflow: hidden;
+            margin: 15px auto;
+        }
+
+        .marqueeleft ul {
+            float: left;
+        }
+
+        .marqueeleft li {
+            float: left;
+            margin: 0 5px;
+            display: inline;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+
+        /* marqueetop */
+        .marqueetop {
+            height: 429px;
+            width: 148px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+
+        .marqueetop li {
+            padding: 5px 0;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            //js无缝滚动代码
+            function marquee(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+                if (direction == "up") {
+                    if (obj2.offsetTop - obj.scrollTop <= 0) {
+                        obj.scrollTop -= (obj1.offsetHeight + 20);
+                    } else {
+                        var tmp = obj.scrollTop;
+                        obj.scrollTop++;
+                        if (obj.scrollTop == tmp) {
+                            obj.scrollTop = 1;
+                        }
+                    }
+                } else {
+                    if (obj2.offsetWidth - obj.scrollLeft <= 0) {
+                        obj.scrollLeft -= obj1.offsetWidth;
+                    } else {
+                        obj.scrollLeft++;
+                    }
+                }
+            }
+
+            function marqueeStart(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+
+                obj2.innerHTML = obj1.innerHTML;
+                var marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                obj.onmouseover = function () {
+                    window.clearInterval(marqueeVar);
+                }
+                obj.onmouseout = function () {
+                    marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                }
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="header_top">
+        <div class="navigation">
+
+            <ul class="menu" id="menu-mainmenu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../qualification/1.html">资质服务</a></li>
+                <li><a href="../management/1.html">管理体系</a></li>
+                <li><a href="../gaoxin/1.html">高新认证</a></li>
+                <li><a href="../fiscaltax/1.html">财税服务</a></li>
+                <li><a href="../property/1.html">知识产权</a></li>
+                <li><a href="../about1.html">联系我们</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="js-silder">
+        <div class="silder-scroll">
+            <div class="silder-main">
+                <div class="silder-main-img">
+                    <img src="../images/2-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/3-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/1-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="containerTop"></div>
+        <div class="containerContent">
+            <div class="content">
+                <div class="breadcrumb">
+                    <span style="float:left; font-size:16px;"></span>
+                    <span style="float:right; font-size:14px;">当前位置:<a href="../index.html">首页</a> &gt; <a
+                            href="javascript:;">系统集成运维专项</a></span>
+                </div>
+
+
+                <div class="posts single" id="post-2">
+                    <p><span class="sspan">
+  一、 信息系统运行维护服务（以下称运维服务）是指采用信息技术手段及方法，依据需方提出的服务级别要求，对其所使用的信息系统运行环境、业务系统等提供的综合服务。<br/>
+       二、 运维资质认定是指中国电子信息行业联合会（以下称电子联合会）依据本实施办法对从事运维服务单位的整体实力、运维服务能力和水平所进行的评价和认定。<br/>
+       三、信息系统集成及服务资质运行维护分项资质（以下称运维资质）认定工作，按照《信息系统集成及服务资质认定管理办法（暂行）》（中电联字〔2015〕1号）有关规定执行，并依据运维资质认定特点制定实施办法。&nbsp;&nbsp;
+                    <p>申报条件如下：</p>
+
+                    </span></p>
+
+                    <hr style="height:1px;border:none;border-top:1px solid #185598;"/>
+
+
+                    <p style="text-align: center;"><span>信息系统集成及服务资质运行维护分项</span></p>
+                    <p style="text-align: center;"><span>资质等级评定条件（2018修订版）</span></p>
+                    <p>
+                        <br/>
+
+                        一、一级条件<br/>
+                        （一）综合条件<br/>
+                        1. 申报单位是在中华人民共和国境内注册的独立法人，变革发展历程清晰、产权关系明确。<br/>
+                        2.
+                        申报单位从事信息系统运行维护服务（以下称运维服务）业务的时间不少于5年。取得信息系统集成及服务资质运行维护分项（以下称运维分项）二级资质的时间不少于2年，或拥有信息系统集成及服务二级及以上资质的时间不少于2年。<br/>
+                        3. 申报单位注册资本和实收资本均不少于3000万元，或所有者权益合计不少于3000万元。<br/>
+                        4. 申报单位应具有独立的运维服务部门，设立的运维服务机构涉及的地区（省、自治区、直辖市）不少于3个。<br/>
+                        （二） 财务状况<br/>
+                        1.
+                        申报单位近三年运维服务收入总额不少于3亿元且占营业收入总额的比例不低于70%，或近三年运维服务收入总额不少于5亿元。财务数据真实可信，须经在中华人民共和国境内登记的会计师事务所审计。<br/>
+                        2. 申报单位财务状况良好。<br/>
+                        3. 申报单位拥有与从事运维服务业务相适应的固定资产和无形资产。<br/>
+                        （三） 信誉<br/>
+                        1. 申报单位有良好的诚信和公众形象。<br/>
+                        2. 申报单位有良好的履约能力，近三年无因申报单位原因造成运维服务未完成的项目或由申报单位承担责任的用户重大投诉。<br/>
+                        3. 申报单位遵守信息系统集成及服务资质管理相关规定，近三年在资质申报和资质证书使用过程中无不良行为。<br/>
+                        （四） 业绩<br/>
+                        1.
+                        申报单位近三年累计执行并按服务协议交付的不少于100万元的运维服务项目（以下称一级评定条件限定项目）总额不少于2亿元，且近三年的营业收入总额中运维服务收入所占比例不低于70%；或一级评定条件限定项目总额不少于3.5亿元。<br/>
+                        2. 申报单位一级评定条件限定项目涉及的地区不少于5个；或一级评定条件限定项目涉及的用户数量不少于10个，且涉及的地区不少于3个。<br/>
+                        3.
+                        申报单位近三年累计执行并按服务协议交付的不少于600万元的运维服务项目数量不少于5个，或近三年累计执行并按服务协议交付的不少于300万元的运维服务项目总额不少于3000万元。且这些项目至少覆盖6种运维服务类别（应用软件运维服务、基础软件运维服务、支撑软件运维服务、主机/存储运维服务、网络运维服务和安全运维服务）中的3种，并以上述6种运维服务类别为主。这些项目具有较高的运维服务技术水平。<br/>
+                        4. 申报单位近三年在主要业务领域承担过国家、行业级复杂大型运维服务项目。<br/>
+                        （五） 管理能力<br/>
+                        1. 申报单位已建立完备的信息技术服务管理体系，持有国家认可的第三方认证机构颁发的认证证书，且持续有效获证时间不少于一年。<br/>
+                        2. 申报单位已建立完备的信息安全管理体系，且持续有效运行时间不少于一年。<br/>
+                        3. 申报单位已建立完善的管理信息系统并能有效运行。<br/>
+                        4.
+                        申报单位主要负责人从事信息技术领域企业管理的经历不少于5年，运维服务业务主要技术负责人应经过运维高级项目经理登记或具有电子信息类高级技术职称、且从事运维服务工作经历不少于5年，财务负责人应具有财务系列高级职称。<br/>
+                        （六） 技术实力<br/>
+                        1. 申报单位具有较强的运维服务研发能力，对主要业务领域的运维服务技术有深入研究，并能以产品形式提供标准化的运维服务。<br/>
+                        2. 申报单位应同时具有平台化的过程管理工具和监控工具，且在一级评定条件限定项目中得到了应用。<br/>
+                        3. 申报单位主要业务领域中典型运维服务项目的技术居国内同行业领先水平。<br/>
+                        （七） 人才实力<br/>
+                        1. 申报单位从事运维服务技术工作的人员不少于200人。<br/>
+                        2. 申报单位经过登记的运维服务项目管理人员人数不少于15名，其中运维高级项目经理人数不少于5名。<br/>
+                        3. 申报单位已建立完备的人力资源管理体系并能有效实施。<br/>
+                        二、二级条件<br/>
+                        （一）综合条件<br/>
+                        1. 申报单位是在中华人民共和国境内注册的独立法人，变革发展历程清晰、产权关系明确。<br/>
+                        2. 申报单位从事运维服务业务的时间不少于3年。取得运维分项三级资质的时间不少于1年，或拥有信息系统集成及服务三级及以上资质的时间不少于2年。<br/>
+                        3. 申报单位注册资本和实收资本均不少于1000万元，或所有者权益合计不少于1000万元。<br/>
+                        4. 申报单位应具有独立的运维服务部门。<br/>
+                        （二） 财务状况<br/>
+                        1. 申报单位近三年运维服务收入总额不少于1.5亿元且占营业收入总额的比例不低于60%，或近三年运维服务收入总额不少于2亿元。财务数据真实可信，须经在中华人民共和国境内登记的会计师事务所审计。<br/>
+                        2. 申报单位财务状况良好。<br/>
+                        3. 申报单位拥有与从事运维服务业务相适应的固定资产和无形资产。<br/>
+                        （三） 信誉<br/>
+                        1. 申报单位有良好的诚信和公众形象。<br/>
+                        2. 申报单位有良好的履约能力，近三年无因申报单位原因造成运维服务未完成的项目或由申报单位承担责任的用户重大投诉。<br/>
+                        3. 申报单位遵守信息系统集成及服务资质管理相关规定，近三年在资质申报和资质证书使用过程中无不良行为。<br/>
+                        （四） 业绩<br/>
+                        1.
+                        申报单位近三年累计执行并按服务协议交付的不少于40万元的运维服务项目（以下称二级评定条件限定项目）总额不少于1亿元，且近三年的营业收入总额中运维服务收入所占比例不低于60%；或二级评定条件限定项目总额不少于1.5亿元。<br/>
+                        2. 申报单位二级评定条件限定项目涉及的地区不少于3个，或二级评定条件限定项目涉及的用户数量不少于5个。<br/>
+                        3.
+                        申报单位近三年累计执行并按服务协议交付的不少于300万元的运维服务项目数量不少于5个，或近三年累计执行并按服务协议交付的不少于150万元的运维服务项目总额不少于1500万元，且这些项目至少覆盖6种运维服务类别（应用软件运维服务、基础软件运维服务、支撑软件运维服务、主机/存储运维服务、网络运维服务和安全运维服务）中的2种，并以上述6种运维服务类别为主。这些项目具有一定的运维服务技术水平。<br/>
+                        （五） 管理能力<br/>
+                        1. 申报单位已建立完备的信息技术服务管理体系，持有国家认可的第三方认证机构颁发的认证证书。<br/>
+                        2. 申报单位已建立信息安全管理体系并能有效运行。<br/>
+                        3. 申报单位已建立管理信息系统并能有效运行。<br/>
+                        4.
+                        申报单位的主要负责人从事信息技术领域企业管理的经历不少于4年，运维服务业务主要技术负责人应经过运维高级项目经理登记或具有电子信息类高级技术职称、且从事运维服务工作经历不少于4年，财务负责人应具有财务系列中级及以上职称。<br/>
+                        （六） 技术实力<br/>
+                        1. 申报单位具有一定的运维服务研发能力。<br/>
+                        2. 申报单位应具有平台化的过程管理工具或平台化的监控工具，且在二级评定条件限定项目中得到了应用。<br/>
+                        3. 申报单位主要业务领域中的典型运维服务项目具有较高技术水平。<br/>
+                        （七） 人才实力<br/>
+                        1. 申报单位从事运维服务技术工作的人员不少于100人。<br/>
+                        2. 申报单位经过登记的运维服务项目管理人员人数不少于10名，其中运维高级项目经理人数不少于3名。<br/>
+                        3. 申报单位已建立人力资源管理体系并能有效实施。<br/>
+                        三、三级条件<br/>
+                        （一）综合条件<br/>
+                        1. 申报单位是在中华人民共和国境内注册的独立法人，变革发展历程清晰、产权关系明确。<br/>
+                        2. 申报单位从事运维服务业务的时间不少于1年。<br/>
+                        3. 申报单位注册资本和实收资本均不少于200万元，或所有者权益合计不少于200万元。<br/>
+                        （二）财务状况<br/>
+                        1.
+                        申报单位近三年运维服务收入总额不少于1500万元且占营业收入总额的比例不低于50%，或近三年运维服务收入总额不少于3000万元。财务数据真实可信，须经在中华人民共和国境内登记的会计师事务所审计。<br/>
+                        2. 申报单位财务状况良好。<br/>
+                        （三） 信誉<br/>
+                        1. 申报单位有良好的诚信和公众形象。<br/>
+                        2. 申报单位有良好的履约能力，近三年无因申报单位原因造成运维服务未完成的项目或由申报单位承担责任的用户重大投诉。<br/>
+                        3. 申报单位遵守信息系统集成及服务资质管理相关规定，近三年在资质申报和资质证书使用过程中无不良行为。<br/>
+                        （四） 业绩<br/>
+                        1.
+                        申报单位近三年累计执行并按服务协议交付的运维服务项目总额不少于1500万元且占营业收入总额的比例不低于50%；或近三年累计执行并按服务协议交付的运维服务项目总额不少于3000万元。<br/>
+                        2. 申报单位近三年累计执行并按服务协议交付的不少于100万元的运维服务项目数量不少于1个，或近三年累计执行并按服务协议交付的不少于20万元的运维服务项目总额不少于100万元。<br/>
+                        （五） 管理能力<br/>
+                        1. 申报单位已建立信息技术服务管理体系，并能有效运行。<br/>
+                        2.
+                        申报单位的主要负责人从事信息技术领域企业管理的经历不少于3年，运维服务业务主要技术负责人应经过运维项目经理登记或具有电子信息类专业硕士及以上学位或电子信息类中级及以上技术职称、且从事运维服务工作经历不少于3年，财务负责人应具有财务系列初级及以上职称。<br/>
+                        （六） 技术实力<br/>
+                        1. 申报单位具有的运维服务工具在近三年累计执行并按服务协议交付的部分运维服务项目中得到了应用。<br/>
+                        2. 申报单位主要业务领域中的典型运维服务项目具有一定技术水平。<br/>
+                        （七） 人才实力<br/>
+                        1. 申报单位从事运维服务技术工作的人员不少于25人。<br/>
+                        2. 申报单位经过登记的运维服务项目管理人员人数不少于3名。<br/>
+                        3. 申报单位具有对员工进行新知识、新技术以及职业道德培训的计划，并能有效地组织实施与考核。<br/>
+
+                    </p>
+
+
+                    <div class="clear"></div>
+                </div>
+
+
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><h3>资质服务</h3>
+                        <ul class="sub">
+                            <li><a title="信息系统集成及服务" href="./1.html">信息系统集成及服务</a></li>
+                            <li class="left_hover"><a title="系统集成运维专项" href="./2.html">系统集成运维专项</a></li>
+                            <li><a title="音视频工程资质" href="./3.html">音视频工程资质</a></li>
+                            <li><a title="软件企业评估" href="./4.html">软件企业评估</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+                <div style="padding-top:20px; width:244px;">
+                    <img src="../images/ScanQRCode.png" width="244"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="footer_frame">
+    <div class="footer">
+        <ul style="margin-right:115px;">
+            <h3>联系我们</h3>
+            <li><a title="联系我们" href="../about1.html">联系我们</a></li>
+        </ul>
+        <ul>
+            <h3>服务项目</h3>
+            <li><a title="资质服务" href="../qualification/1.html">资质服务</a></li>
+            <li><a title="管理体系" href="../management/1.html">管理体系</a></li>
+            <li><a title="高新认证" href="../gaoxin/1.html">高新认证</a></li>
+            <li><a title="财税服务" href="../fiscaltax/1.html">财税服务</a></li>
+            <li><a title="知识产权" href="../property/1.html">知识产权</a></li>
+        </ul>
+        <ul>
+            <h3>友情链接</h3>        
+            <li><a title="集成认证网" href="http://www.csi-s.org.cn/miit">集成认证网</a></li>
+            <li><a title="认可监督网" href="http://cx.cnca.cn/rjwcx/web/cert/index.do?progId=1212">认可监督网</a></li>
+            <li><a title="高新认证网" href="http://www.innocom.gov.cn/">高新认证网</a></li>
+            <li><a title="中国音像协会" href="http://www.chinaave.org/">中国音像协会</a></li>
+            <li><a title="北京安防协会" href="http://www.bspia.com/">北京安防协会</a></li>
+        </ul>
+        <ul>
+            <h3>公司简介</h3>
+            <li><a title="公司简介" href="../about2.html">公司简介</a></li>
+            <li><a title="企业文化" href="../about3.html">企业文化</a></li>
+        </ul>
+    </div>
+    <div class="footer_bottom">
+        <span class="corp">版权所有 安智创信(北京)科技有限公司 　地址：北京市昌平区发展路八号院6号楼512室　　全国统一服务热线：010-53602470&nbsp;&nbsp;&nbsp; </span>
+        <span class="support">京ICP备18012261号 </span>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        $(".js-silder").silder({
+            auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
+            speed: 30,//轮播图运动速度
+            sideCtrl: true,//是否需要侧边控制按钮
+            bottomCtrl: true,//是否需要底部控制按钮
+            defaultView: 0,//默认显示的索引
+            interval: 5000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
+            activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>软件著作权</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../slick.min.js"></script>
+
+    <script src="../wySilder.min.js" type="text/javascript"></script>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../animations.css" media="all">
+    <link rel="stylesheet" href="../style.css" media="all">
+    <link rel="stylesheet" href="../styles.css" media="all">
+    <link rel="stylesheet" href="../amazeui.slick.min.css" media="all">
+    <link rel="stylesheet" href="../index.css"/>
+    <link rel="stylesheet" href="../span.css"/>
+
+
+    <!--演示内容开始-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a, img {
+            border: 0;
+        }
+
+        body {
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+
+        /* marqueeleft */
+        .marqueeleft {
+            height: 130px;
+            width: 1000px;
+            overflow: hidden;
+            margin: 15px auto;
+        }
+
+        .marqueeleft ul {
+            float: left;
+        }
+
+        .marqueeleft li {
+            float: left;
+            margin: 0 5px;
+            display: inline;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+
+        /* marqueetop */
+        .marqueetop {
+            height: 429px;
+            width: 148px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+
+        .marqueetop li {
+            padding: 5px 0;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            //js无缝滚动代码
+            function marquee(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+                if (direction == "up") {
+                    if (obj2.offsetTop - obj.scrollTop <= 0) {
+                        obj.scrollTop -= (obj1.offsetHeight + 20);
+                    } else {
+                        var tmp = obj.scrollTop;
+                        obj.scrollTop++;
+                        if (obj.scrollTop == tmp) {
+                            obj.scrollTop = 1;
+                        }
+                    }
+                } else {
+                    if (obj2.offsetWidth - obj.scrollLeft <= 0) {
+                        obj.scrollLeft -= obj1.offsetWidth;
+                    } else {
+                        obj.scrollLeft++;
+                    }
+                }
+            }
+
+            function marqueeStart(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+
+                obj2.innerHTML = obj1.innerHTML;
+                var marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                obj.onmouseover = function () {
+                    window.clearInterval(marqueeVar);
+                }
+                obj.onmouseout = function () {
+                    marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                }
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="header_top">
+        <div class="navigation">
+
+            <ul class="menu" id="menu-mainmenu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../qualification/1.html">资质服务</a></li>
+                <li><a href="../management/1.html">管理体系</a></li>
+                <li><a href="../gaoxin/1.html">高新认证</a></li>
+                <li><a href="../fiscaltax/1.html">财税服务</a></li>
+                <li><a href="../property/1.html">知识产权</a></li>
+                <li><a href="../about1.html">联系我们</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="js-silder">
+        <div class="silder-scroll">
+            <div class="silder-main">
+                <div class="silder-main-img">
+                    <img src="../images/2-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/3-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/1-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="containerTop"></div>
+        <div class="containerContent">
+            <div class="content">
+                <div class="breadcrumb">
+                    <span style="float:left; font-size:16px;"></span>
+                    <span style="float:right; font-size:14px;">当前位置:<a href="../index.html">首页</a> &gt; <a
+                            href="javascript:;">软件著作权</a></span>
+                </div>
+
+                
+                <div class="posts single" id="post-2">
+                    <p style="LINE-HEIGHT: 2em; TEXT-INDENT: 28px; MARGIN-BOTTOM: 15px"><span style="FONT-FAMILY: 微软雅黑, sans-serif; COLOR: rgb(102,102,102); FONT-SIZE: 14px">安智创信具有丰富的计算机软件著作权登记代理经验和完善的服务体系，以敬业的精神、专业的能力为客户提供高质量的知识产权服务。我公司多年代理申请的软件著作权登记全部获得通过并取得计算机软件著作权登记证书，赢得了广大客户的支持和信赖。目前我公司提供软件著作权登记、转让、变更及3-30个工作日的加急服务，代理客户遍布国内大部分省、市、自治区，涉及高校、企业、事业、科研等多种单位。</span></p>
+                    
+                    
+                    <p style="LINE-HEIGHT: 2em; MARGIN-BOTTOM: 10px"></p><p style="line-height: 2em;"><img src="../images/xm/line.jpg"></p>
+
+                    <div class="xmzx1">
+<div id="bizQQ_WPA">
+                        
+</div>
+                    </div>
+                    <br>
+                    <p><img src="../images/xm/pic2.jpg"></p><br>
+                    <p><img src="../images/xm/pic3.jpg"></p><br>
+                    <p><img src="../images/xm/pic4.jpg"></p>
+                    
+<br>
+                    <p><img src="../images/xm/pic6.jpg"></p>
+
+                    
+                    <p><br></p>
+                    <div class="clear"></div>
+                </div>
+                
+                
+
+
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><h3>知识产权</h3>
+                        <ul class="sub">
+                            <li class="left_hover"><a title="软件著作权" href="./1.html">软件著作权</a></li>
+                            <li><a title="商标注册" href="./2.html">商标注册</a></li>
+                            <li><a title="软件测评" href="./3.html">软件测评</a></li>
+                            <li><a title="游戏版号" href="./4.html">游戏版号</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div style="padding-top:20px; width:244px;">
+                    <img src="../images/ScanQRCode.png" width="244"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="footer_frame">
+    <div class="footer">
+        <ul style="margin-right:115px;">
+            <h3>联系我们</h3>
+            <li><a title="联系我们" href="../about1.html">联系我们</a></li>
+        </ul>
+        <ul>
+            <h3>服务项目</h3>
+            <li><a title="资质服务" href="../qualification/1.html">资质服务</a></li>
+            <li><a title="管理体系" href="../management/1.html">管理体系</a></li>
+            <li><a title="高新认证" href="../gaoxin/1.html">高新认证</a></li>
+            <li><a title="财税服务" href="../fiscaltax/1.html">财税服务</a></li>
+            <li><a title="知识产权" href="../property/1.html">知识产权</a></li>
+        </ul>
+        <ul>
+            <h3>友情链接</h3>        
+            <li><a title="集成认证网" href="http://www.csi-s.org.cn/miit">集成认证网</a></li>
+            <li><a title="认可监督网" href="http://cx.cnca.cn/rjwcx/web/cert/index.do?progId=1212">认可监督网</a></li>
+            <li><a title="高新认证网" href="http://www.innocom.gov.cn/">高新认证网</a></li>
+            <li><a title="中国音像协会" href="http://www.chinaave.org/">中国音像协会</a></li>
+            <li><a title="北京安防协会" href="http://www.bspia.com/">北京安防协会</a></li>
+        </ul>
+        <ul>
+            <h3>公司简介</h3>
+            <li><a title="公司简介" href="../about2.html">公司简介</a></li>
+            <li><a title="企业文化" href="../about3.html">企业文化</a></li>
+        </ul>
+    </div>
+    <div class="footer_bottom">
+        <span class="corp">版权所有 安智创信(北京)科技有限公司 　地址：北京市昌平区发展路八号院6号楼512室　　全国统一服务热线：010-53602470&nbsp;&nbsp;&nbsp; </span>
+        <span class="support">京ICP备18012261号 </span>
+    </div>
+</div>
+ 
+<div id="leftsead">
+	<ul>
+		
+		<li>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=40967557&site=qq&menu=yes">
+				<div class="hides" style="width:161px;display:none;" id="qq">
+					<div class="hides" id="p1">
+						<img src="images/ll04.png">
+					</div>
+					<div class="hides" id="p2"><span style="color:#FFF;font-size:13px">在线咨询</span>
+					</div>
+				</div>
+				<img src="images/l04.png" width="47" height="49" class="shows" />
+			</a>
+		</li>
+    
+        
+        <li id="btn">
+        <a id="top_btn">
+            <div class="hides" style="width:161px;display:none">
+                <img src="images/ll06.png" width="161" height="49" />
+            </div>
+            <img src="images/l06.png" width="47" height="49" class="shows" />
+        </a>
+    </li>
+    </ul>
+</div>
+</body>
+<script src="youce.js"></script>
+
+<script>
+    $(function () {
+        $(".js-silder").silder({
+            auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
+            speed: 30,//轮播图运动速度
+            sideCtrl: true,//是否需要侧边控制按钮
+            bottomCtrl: true,//是否需要底部控制按钮
+            defaultView: 0,//默认显示的索引
+            interval: 5000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
+            activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
+        });
+    });
+</script>
+
+</html>

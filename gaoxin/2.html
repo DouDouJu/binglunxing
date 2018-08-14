@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>中关村高新技术企业</title>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../slick.min.js"></script>
+
+    <script src="../wySilder.min.js" type="text/javascript"></script>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../animations.css" media="all">
+    <link rel="stylesheet" href="../style.css" media="all">
+    <link rel="stylesheet" href="../styles.css" media="all">
+    <link rel="stylesheet" href="../amazeui.slick.min.css" media="all">
+    <link rel="stylesheet" href="../index.css"/>
+    <link rel="stylesheet" href="../span.css"/>
+
+
+    <!--演示内容开始-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a, img {
+            border: 0;
+        }
+
+        body {
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+
+        /* marqueeleft */
+        .marqueeleft {
+            height: 130px;
+            width: 1000px;
+            overflow: hidden;
+            margin: 15px auto;
+        }
+
+        .marqueeleft ul {
+            float: left;
+        }
+
+        .marqueeleft li {
+            float: left;
+            margin: 0 5px;
+            display: inline;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueeleft li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+
+        /* marqueetop */
+        .marqueetop {
+            height: 429px;
+            width: 148px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+
+        .marqueetop li {
+            padding: 5px 0;
+            width: 148px;
+            height: 133px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .pic {
+            display: block;
+            border: #ccc 1px solid;
+            width: 135px;
+            height: 104px;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        .marqueetop li .txt {
+            text-align: center;
+            height: 23px;
+            line-height: 23px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            //js无缝滚动代码
+            function marquee(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+                if (direction == "up") {
+                    if (obj2.offsetTop - obj.scrollTop <= 0) {
+                        obj.scrollTop -= (obj1.offsetHeight + 20);
+                    } else {
+                        var tmp = obj.scrollTop;
+                        obj.scrollTop++;
+                        if (obj.scrollTop == tmp) {
+                            obj.scrollTop = 1;
+                        }
+                    }
+                } else {
+                    if (obj2.offsetWidth - obj.scrollLeft <= 0) {
+                        obj.scrollLeft -= obj1.offsetWidth;
+                    } else {
+                        obj.scrollLeft++;
+                    }
+                }
+            }
+
+            function marqueeStart(i, direction) {
+
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+
+                obj2.innerHTML = obj1.innerHTML;
+                var marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                obj.onmouseover = function () {
+                    window.clearInterval(marqueeVar);
+                }
+                obj.onmouseout = function () {
+                    marqueeVar = window.setInterval("marquee(" + i + ", '" + direction + "')", 20);
+                }
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="header_top">
+        <div class="navigation">
+
+            <ul class="menu" id="menu-mainmenu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../qualification/1.html">资质服务</a></li>
+                <li><a href="../management/1.html">管理体系</a></li>
+                <li><a href="../gaoxin/1.html">高新认证</a></li>
+                <li><a href="../fiscaltax/1.html">财税服务</a></li>
+                <li><a href="../property/1.html">知识产权</a></li>
+                <li><a href="../about1.html">联系我们</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="js-silder">
+        <div class="silder-scroll">
+            <div class="silder-main">
+                <div class="silder-main-img">
+                    <img src="../images/2-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/3-1.jpg" alt="">
+                </div>
+                <div class="silder-main-img">
+                    <img src="../images/1-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="containerTop"></div>
+        <div class="containerContent">
+            <div class="content">
+                <div class="breadcrumb">
+                    <span style="float:left; font-size:16px;"></span>
+                    <span style="float:right; font-size:14px;">当前位置:<a href="../index.html">首页</a> &gt; <a
+                            href="javascript:;">中关村高新技术企业</a></span>
+                </div>
+
+
+                <div class="posts single" id="post-2">
+                    
+
+                    <p><span class="sspan">
+为深入学习实践科学发展观，落实北京市委市政府关于“应对国际金融危机，保增长，促发展”的要求，不断优化中关村科技园区创新创业环境，促进中关村高新技术企业发展，保持高新技术产业的持续较快增长，特制定中关村高新技术企业认定管理办法。<br/>
+纳入中关村科技园区统计范围的下列四类企业（统称为中关村高新技术企业）可以分别享受国家、北京市和中关村科技园区的有关扶持政策。注册在中关村科技园区以及中关村管委会和有关区县政府共建的高新技术产业基地（以下简称共建基地）内，按照《高新技术企业认定管理办法》（国科发火[2008]172号）取得中关村高新技术企业资格的企业；<br/>
+
+
+
+                    </span></p>
+                    <hr style="height:1px;border:none;border-top:1px solid #185598;"/>
+                    <p style="text-align: center;"><span>中关村高新技术企业申请要求及条件</span></p>
+                    <p> 
+
+（一）获得国家高新技术企业证书且证书在有效期内的企业。<br/>
+（二）注册在中关村示范区范围内，符合下列条件之一的企业，可申请中关村高新技术企业证书，纳入中关村高新技术企业统计范围。<br/>
+1.主要产品或主营业务活动属于《国家重点支持的高新技术领域》规定的范围，并达到下列标准之一：<br/>
+（1）科技活动人员（企业内部直接参加科技项目人员以及项目的管理人员和直接服务人员）占期末从业人员的比例不低于10%。<br/>
+（2）科技活动相关经费支出（包括企业内部用于开展科技活动的直接支出，用于科技活动的管理费、服务费和外协加工费等支出，与外单位合作或者委托外单位进行科技活动而转拨给对方的经费支出，来自政府部门的科技活动资金，以及当年形成用于科技活动的固定资产、购买专利等无形资产的支出）占企业总收入的比例不低于3%。<br/>
+（3）具有自主知识产权，包括专利、软件著作权、集成电路布图设计权、植物新品种、国家新药、国家一级中药保护品种、国家级农作物品种、国防专利、技术秘密等。<br/>
+（4）企业的技术收入与高新技术产品销售收入的总和占本企业当年总收入的40%以上。
+2.高技术服务业企业和文化创意企业。<br/>
+（1）高技术服务业企业可分为信息服务类、电子商务服务类、检验检测服务类、专业技术服务业的高技术服务类、研发与设计服务类、科技成果转化服务类、知识产权及相关法律服务类、环境监测及治理服务类、其他高技术服务类等9大类，具体可参照国家统计局的《高技术产业（服务业）分类（2013）》（试行）（国统字〔2013〕33号）。<br/>
+（2）文化创意企业可分为文化艺术、新闻出版类、广播电视电影类、软件网络及计算机服务类、广告会展类、艺术品拍卖类、设计服务类、旅游休闲娱乐类、高技术改造传统产业其他辅助服务类等9大类，具体可参照《科技部 财政部 国家税务总局关于在中关村国家自主创新示范区完善高新技术企业认定中文化产业支撑技术等领域范围的通知》（国科发火〔2014〕20号）以及《北京市文化创意产业分类标准》（京统发〔2006〕154号）2011年修订版。<br/>
+3.科技型总部企业和科技服务业企业。<br/>
+ 
+                        
+
+                    </p>
+                        
+                        
+                        
+                        
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+
+
+                    <div class="clear"></div>
+                </div>
+
+
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><h3>高新认证</h3>
+                        <ul class="sub">
+                            <li><a title="国家高新技术认定" href="./1.html">国家高新技术认定</a></li>
+                            <li class="left_hover"><a title="中关村高新技术企业" href="./2.html">中关村高新技术企业</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div style="padding-top:20px; width:244px;">
+                    <img src="../images/ScanQRCode.png" width="244"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="footer_frame">
+    <div class="footer">
+        <ul style="margin-right:115px;">
+            <h3>联系我们</h3>
+            <li><a title="联系我们" href="../about1.html">联系我们</a></li>
+        </ul>
+        <ul>
+            <h3>服务项目</h3>
+            <li><a title="资质服务" href="../qualification/1.html">资质服务</a></li>
+            <li><a title="管理体系" href="../management/1.html">管理体系</a></li>
+            <li><a title="高新认证" href="../gaoxin/1.html">高新认证</a></li>
+            <li><a title="财税服务" href="../fiscaltax/1.html">财税服务</a></li>
+            <li><a title="知识产权" href="../property/1.html">知识产权</a></li>
+        </ul>
+        <ul>
+            <h3>友情链接</h3>        
+            <li><a title="集成认证网" href="http://www.csi-s.org.cn/miit">集成认证网</a></li>
+            <li><a title="认可监督网" href="http://cx.cnca.cn/rjwcx/web/cert/index.do?progId=1212">认可监督网</a></li>
+            <li><a title="高新认证网" href="http://www.innocom.gov.cn/">高新认证网</a></li>
+            <li><a title="中国音像协会" href="http://www.chinaave.org/">中国音像协会</a></li>
+            <li><a title="北京安防协会" href="http://www.bspia.com/">北京安防协会</a></li>
+        </ul>
+        <ul>
+            <h3>公司简介</h3>
+            <li><a title="公司简介" href="../about2.html">公司简介</a></li>
+            <li><a title="企业文化" href="../about3.html">企业文化</a></li>
+        </ul>
+    </div>
+    <div class="footer_bottom">
+        <span class="corp">版权所有 安智创信(北京)科技有限公司 　地址：北京市昌平区发展路八号院6号楼512室　　全国统一服务热线：010-53602470&nbsp;&nbsp;&nbsp; </span>
+        <span class="support">京ICP备18012261号 </span>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        $(".js-silder").silder({
+            auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
+            speed: 30,//轮播图运动速度
+            sideCtrl: true,//是否需要侧边控制按钮
+            bottomCtrl: true,//是否需要底部控制按钮
+            defaultView: 0,//默认显示的索引
+            interval: 5000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
+            activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
+        });
+    });
+</script>
+
+</html>
